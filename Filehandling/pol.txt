@@ -1,0 +1,1 @@
+['Question1. The buying or selling of goods over the internet is termed as\n', '(1) e-selling\n', '(2) e-buying\n', '(3) e-business\n', '(4) e-commerce\n']['Question2. Verification of a login name and password is known as\n', '(1) Configuration\n', '(2) Accessibility\n', '(3) Logging in\n', '(4) Authentication\n']

@@ -1,0 +1,1 @@
+['Question1. GUI stands for\n', '(1) Graphical Universal Interference\n', '(2) Graphic Universal Interface\n', '(3) Graphical User Interface\n', '(4) Graphical Unity Interference\n']['Question2. Verification of a login name and password is known as\n', '(1) Configuration\n', '(2) Accessibility\n', '(3) Logging in\n', '(4) Authentication\n']

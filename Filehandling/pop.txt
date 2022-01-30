@@ -1,0 +1,1 @@
+['Question1. What is the term for unsolicited e-mail?\n', '(1) Flamming\n', '(2) Usenet\n', '(3) Spam\n', '(4) Backbone\n']['Question2. Which of the following is not a valid version of MS-Office?\n', '(1) Office 2000\n', '(2) Office XP\n', '(3) Office 2003\n', '(4) Office 2007\n']

@@ -1,0 +1,1 @@
+['Question1. Which of the following is used to write Web pages?\n', '(1) URL\n', '(2) HTML\n', '(3) Telnet\n', '(4) HTTP\n']

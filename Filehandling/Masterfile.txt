@@ -1,0 +1,121 @@
+Question. Which of the following places the common data elements in order from smallest to largest?
+(1) Bit, byte, character, record, field, file, database
+(2) Database, file, record, field, character
+(3) Character, record, field, database, file
+(4) Character, file, record, field, database
+(5) Character, field, record, file, database
+Question. Specialised programs that assist users in locating information on the web are called
+(1) Web browsers
+(2) Information engines
+(3) Data engines
+(4) Search engines
+(5) None of these
+Question. What is the term for unsolicited e-mail?
+(1) Flamming
+(2) Usenet
+(3) Spam
+(4) Backbone
+(5) News Group
+Question. Processor speed is measured in
+(1) bytes
+(2) gigabytes
+(3) gigahertz
+(4) megabytes
+(5) kilobytes
+Question. Which of the following can be used to select the entire document?
+(1) Ctrl + H
+(2) Alt + S
+(3) Shift + E
+(4) Ctrl+A
+(5) Ctrl + K
+Question. The buying or selling of goods over the internet is termed as
+(1) e-selling
+(2) e-buying
+(3) e-business
+(4) e-commerce
+(5) e-transaction
+Question. What are the programs that block access to selected websites known as?
+(1) Channels
+(2) Filters
+(3) Browsers
+(4) Telnet
+(5) Drivers
+Question. Which of the following is not a valid version of MS-Office?
+(1) Office 2000
+(2) Office XP
+(3) Office 2003
+(4) Office 2007
+(5) Office Vista
+Question. Which of the following is used to write Web pages?
+(1) URL
+(2) HTML
+(3) Telnet
+(4) HTTP
+(5) FTP
+Question. A computer chip is also called a
+(1) register
+(2) switch
+(3) server
+(4) modem
+(5) microprocessor
+Question. VIRUS stands for __________
+(1) Vital Information Region Under Siege
+(2) Vital Information Recourse Under System
+(3) Vital Information Resource Under Secure
+(4) Vital Information Resource Under Siege
+(5) Virus Information Recourse Under Siege
+Question. Verification of a login name and password is known as
+(1) Configuration
+(2) Accessibility
+(3) Logging in
+(4) Authentication
+(5) Subscription
+Question. Microsoft Word is an example of alan
+(1) system software
+(2) application software
+(3) operating system
+(4) processing device
+(5) input device
+Question. What does the acronym PDF stand for?
+(1) Portable Documentation File
+(2) Portable Document Format
+(3) Portable Document File
+(4) Portable Documenting Format
+(5) Portable Documentation Format
+Question. Which of the following refers to programs stored in ROM?
+(1) Hardware
+(2) Software
+(3) Peripheral
+(4) Firmware
+(5) Freeware
+Question. In processing cheques, which of the following PO techniques have Indian banks traditionally followed?
+(1) VRT
+(2) OMR
+(3) OCR
+(4) Barcode
+(5) MICR
+Question. Windows Explorer is the name of
+(1) a drive
+(2) a file manager
+(3) a web browser
+(4) an internet server
+(5) a network
+Question. GUI stands for
+(1) Graphical Universal Interference
+(2) Graphic Universal Interface
+(3) Graphical User Interface
+(4) Graphical Unity Interference
+(5) Graph Utility Interference
+Question. ________ is the process of finding errors in software code.
+(1) Exchanging
+(2) Debugging
+(3) Running
+(4) Compressing
+(5) None of these
+Question. DOS stands for
+(1) Disk Operating Session
+(2) Disk Operating System
+(3) Digital Operating System
+(4) Disk Opening Source
+(5) Digital Open System
+

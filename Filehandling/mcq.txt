@@ -1,0 +1,5 @@
+['Question1. DOS stands for\n', '(1) Disk Operating Session\n', '(2) Disk Operating System\n', '(3) Digital Operating System\n', '(4) Disk Opening Source\n']
+['Question2. In processing cheques, which of the following PO techniques have Indian banks traditionally followed?\n', '(1) VRT\n', '(2) OMR\n', '(3) OCR\n', '(4) Barcode\n']
+['Question3. Which of the following refers to programs stored in ROM?\n', '(1) Hardware\n', '(2) Software\n', '(3) Peripheral\n', '(4) Firmware\n']
+['Question4. Processor speed is measured in\n', '(1) bytes\n', '(2) gigabytes\n', '(3) gigahertz\n', '(4) megabytes\n']
+['Question5. Verification of a login name and password is known as\n', '(1) Configuration\n', '(2) Accessibility\n', '(3) Logging in\n', '(4) Authentication\n']

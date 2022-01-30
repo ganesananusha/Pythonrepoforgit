@@ -1,0 +1,296 @@
+DCM Messages,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,Board Type,,,,,,,,,,
+Message text,Symbolic Main_ID,Main_ID,Board,Port,"Reference
+(Mux:TS)",SubID1,SubID2,Subject,Detail,Category,Class,SubClassType,SubClassNr,Default Enabled/ Disabled,BeginDelay,EndDelay,Severity,Behaviour,MeasType,MB,ASI,DRD 8VSB,GbE,ASI-SFN,IP VGW,TC,Additional Info,Reviewed,Worst case detection time,Implementation checklist
+TS Sync Loss,ALARM_MAIN_ID_TSSL,0x0001,X,X,X,,,"Board, Port",No detail,Input,Quality,Measure,MSG_SUB_CLASS_NR_MPEG_SYNC_LOSS_INPUT,Enabled,0,0,MAJOR,Cleared by system,Binary,Not,V01-00,V08-01,V01-00,V06-09,V07-01,Not,,,,ok
+Sync Byte Error,ALARM_MAIN_ID_SBE,0x0002,X,X,X,,,"Board, Port, TS info",TS info,Input,Quality,Measure,MSG_SUB_CLASS_NR_SYNC_BYTE,Enabled,0,0,MAJOR,Cleared by system,Binary,Not,V02-05,V08-01,V02-05,V06-09,Not,Not,,,,
+CC Error,ALARM_MAIN_ID_CC,0x0003,X,X,X,,,"Board, Port, TS info","TS info, Source IP, PID value",Input,Quality,Measure,MSG_SUB_CLASS_NR_CC_ERROR,Disabled,0,0,MAJOR,Cleared by system,Binary,Not,V02-05,V08-01,V02-05,V06-09,Not,Not,,,,ok_rt_PS
+Link Loss,ALARM_MAIN_ID_LINK_LOSS,0x0004,X,X,,,,"Board, Port",No detail,Input,Quality,Measure,MSG_SUB_CLASS_NR_NO_INPUT_SIGNAL,Enabled,0,0,MAJOR,Cleared by system,Binary,Not,Not,Not,V01-00,Not,V07-01,Not,,,,ok
+Link Switched,ALARM_MAIN_ID_LINK_SWITCHED,0x0005,X,X,,,,No subject,New Link,Input,Quality,Measure,MSG_SUB_CLASS_NR_UDP_LOSS,Enabled,0,0,INFORMATION,Not pending,Binary,Not,Not,Not,Not,Not,V07-05,Not,,,,ok
+Bandwidth Exceeded,ALARM_MAIN_ID_BW_EXCEEDED,0x0006,X,X,X,,,"Board, Port, TS info",TS info,Output,Quality,Measure,MSG_SUB_CLASS_NR_SPTS_BFR_OVERFLOW,Enabled,0,0,MAJOR,Cleared by system,Binary,Not,V01-01,V08-01,V01-01,V06-09,Not,Not,,,,ok_PS
+UDP Stream Loss,ALARM_MAIN_ID_UDP_LOSS,0x0007,X,X,X,,,"Board, Port, TS info","TS info, Source IP",Input,Quality,Measure,MSG_SUB_CLASS_NR_UDP_LOSS,Enabled,0,0,MAJOR,Cleared by system,Binary,Not,Not,Not,V01-05,Not,V07-01,Not,,,,ok_rt
+SD/HD Mismatch,ALARM_MAIN_ID_SD_HD_CONFLICT,0x0008,X,X,X,SID,,"Board, Port, TS info, SID",No detail,Output,Quality,Measure,MSG_SUB_CLASS_NR_SD_HD_CONFLICT,Enabled,0,0,MAJOR,Cleared by system,Binary,Not,V01-05,V08-01,V01-05,V06-09,Not,Not,,,,not_ok_PS (no detail)
+PID Error,ALARM_MAIN_ID_PID,0x0009,X,X,X,,,"Board, Port, TS info","TS info, Source IP, PID value",Input,Quality,Measure,MSG_SUB_CLASS_NR_PID_ERROR,Disabled,0,0,MAJOR,Cleared by system,Binary,Not,V02-00,V08-01,V02-00,V06-09,Not,Not,,,,ok_rt_PS
+Scrambler Activated,ALARM_MAIN_ID_SCRAMBLER_ACTIVATED,0x0010,X,,,,,No subject,No detail,Other,Equipment,User Action,MSG_SUB_CLASS_NR_USER_ACTIVATED_SCRAMBLING,Enabled,0,0,INFORMATION,Not pending,Binary,Not,Not,Not,Not,Not,Not,Not,,,,
+No ECMG Connection Available,ALARM_MAIN_ID_ECMG_NO_CHANNEL_AVAILABLE,0x0011,X,,EcmgId,,,ECMG: Name,SuperCAS ID,Other,Quality,Measure,MSG_SUB_CLASS_NR_ECMG_NO_CHANNEL_AVAILABLE,Enabled,0,0,MAJOR,Cleared by system,Binary,V02-00,Not,Not,Not,Not,Not,Not,,x,,
+Received Channel Error Message,ALARM_MAIN_ID_CHANNEL_ERROR,0x0012,X,,EcmgId,,,ECMG: Name,SuperCAS ID + source + Channel ID + Error + info,Other,Communication,Communication,MSG_SUB_CLASS_NR_CHANNEL_ERROR,Enabled,0,0,MAJOR,Cleared by user,Binary,V02-00,Not,Not,Not,Not,Not,Not,,x,,
+Scrambling not started,ALARM_MAIN_ID_CLEAR_EXTENTION,0x0013,X,,X,ScgId,,Scrambler,Reason + SuperCAS ID + ECM ID / (SCG ID+ONID+TSID+ESPID+SID),Other,Quality,Measure,MSG_SUB_CLASS_NR_SCS_CLEAR_EXTENSION,Enabled,10,10,MAJOR,Cleared by system,Binary,Not,V02-00,Not,V02-00,V06-09,Not,Not,,x,,
+No Components to Scramble: CP Extension,ALARM_MAIN_ID_CP_EXTENTION_NO_COMP,0x0014,X,,X,ScgId,,Scrambler,SCG ID + ONID + TSID + PIDs/SIDs,Other,Quality,Measure,MSG_SUB_CLASS_NR_SCS_CP_EXTENTION_NO_COMP,Enabled,0,0,MAJOR,Cleared by system,Binary,Not,V02-00,Not,V02-00,V06-09,Not,Not,,x,,,,,,,,,,,
+Active ECMG Removed,ALARM_MAIN_ID_ECMG_REMOVE,0x0015,X,,EcmgId,,,ECMG: Name,SuperCAS ID + Nbr of Streams + StreamIDs,Other,Quality,User Action,MSG_SUB_CLASS_NR_USER_ECMG_REMOVE,Enabled,0,0,MAJOR,Cleared by user,Binary,V02-00,Not,Not,Not,Not,Not,Not,,x,,,,,,,,,,,
+Active EMMG Removed,ALARM_MAIN_ID_EMMG_REMOVE,0x0016,X,,EmmId,,,EMMG: Name,Peer IP + ClientId + DataId,Other,Quality,User Action,MSG_SUB_CLASS_NR_USER_EMMG_REMOVE,Enabled,0,0,MAJOR,Cleared by user,Binary,V02-00,Not,Not,Not,Not,Not,Not,,x,,,,,,,,,,,
+Active PSIG Removed,ALARM_MAIN_ID_PSIG_REMOVE,0x0017,X,,PsigId,,,PSIG: Name,Peer IP + StreamId,Other,Quality,User Action,MSG_SUB_CLASS_NR_USER_PSIG_REMOVE,Enabled,0,0,MAJOR,Cleared by user,Binary,V02-00,Not,Not,Not,Not,Not,Not,,x,,,,,,,,,,,
+Active EIS Removed,ALARM_MAIN_ID_EIS_REMOVE,0x0018,X,,EisId,,,EIS: Name,Peer IP,Other,Quality,User Action,MSG_SUB_CLASS_NR_USER_EIS_REMOVE,Enabled,0,0,MAJOR,Cleared by user,Binary,V02-00,Not,Not,Not,Not,Not,Not,,x,,,,,,,,,,,
+Channel closed by CA System,ALARM_MAIN_ID_CHANNEL_CLOSE_PEER,0x0019,X,,"EisId, EmmId, PsigId",,,Type : Name,Peer IP + Channel Id,Other,Communication,Communication,MSG_SUB_CLASS_NR_CHANNEL_CLOSE_PEER,Enabled,0,0,MINOR,Cleared by system,Binary,V02-00,Not,Not,Not,Not,Not,Not,,x,,,,,,,,,,,
+Connection with CA System lost,ALARM_MAIN_ID_CONNECTION_LOST,0x001A,X,,"EcmgId, EisId, EmmId, PsigId",,,Type : Name,Peer IP + (Reason is provided by EIS and EMM),Other,Communication,Communication,MSG_SUB_CLASS_NR_CONNECTION_LOST,Enabled,0,0,MAJOR,Cleared by system,Binary,V02-00,Not,Not,Not,Not,Not,Not,,x,,,,,,,,,,,
+Requested PID could not be allocated,ALARM_MAIN_ID_PID_COULD_NOT_BE_ALLOCATED,0x001B,X,,X,ScgId,EcmId,Scrambler,"SuperCAS ID, ECM ID, EcmLowerPid, EcmUpperPid",Other,Quality,Measure,MSG_SUB_CLASS_NR_PID_COULD_NOT_BE_ALLOCATED,Enabled,0,0,WARNING,Cleared by system,Binary,Not,V04-05,Not,V04-05,V06-09,Not,Not,,x,,,,,,,,,,,
+Service Loss,ALARM_MAIN_ID_SERVICE_LOSS,0x001C,X,X,X,SID,,"Board, Port, TS info, SID (on TC, Port and TS info are replaced by service User Tag)","TS info, Source IP, Cause",Input,Quality,Measure,MSG_SUB_CLASS_NO_VALID_INPUT_STREAM,Disabled,0,0,MAJOR,Cleared by system,Binary,Not,V02-00,V08-01,V02-00,V06-09,Future (2),V07-05,,,,ok,,,,,,,,,
+No ECM's available: CP Extension,ALARM_MAIN_ID_CP_EXTENSION_NO_ECMS,0x001D,X,,X,ScgId,,Scrambler,"SuperCAS ID, ECM ID, SCG ID, ON ID, TS ID, PID's/SID's",Other,Quality,Measure,MSG_SUB_CLASS_NR_SCS_CP_EXTENSION_NO_ECMS,Enabled,0,0,MAJOR,Cleared by system,Binary,Not,V02-00,Not,V02-00,V06-09,Not,Not,,x,,,,,,,,,,,
+No EMM resources available,ALARM_MAIN_ID_NO_EMM_RESOURCES,0x001E,X,,,,,Scrambler,"No. of EMM's in use, Max. No. of EMM's allowed",Other,Quality,Measure,MSG_SUB_CLASS_NR_NO_EMM_RESOURCES,Enabled,0,0,MAJOR,Cleared by system,Binary,Not,V02-00,Not,V02-00,V06-09,Not,Not,,x,,,,,,,,,,,
+UDP Loss,ALARM_MAIN_ID_PORT_UDP_LOSS,0x001F,X,X,,,,"Board, Port",No detail,Input,Quality,Measure,MSG_SUB_CLASS_NR_PORT_UDP_LOSS,Enabled,0,0,MAJOR,Cleared by system,Binary,Not,Not,Not,V02-03,Not,V07-01,Not,,,,ok,,,,,,,,,
+Unreferenced Pid Error,ALARM_MAIN_ID_UNREFERENCED_PID,0x0020,X,X,X,,,"Board, Port, TS info","TS info, Source IP",Input,Quality,Measure,MSG_SUB_CLASS_NR_UNREFERENCED_PID_ERROR,Disabled,0,0,MAJOR,Cleared by system,Binary,Not,V02-05,V08-01,V02-05,V06-09,Not,Not,,,,ok_rt_PS,,,,,,,,,
+Unreferenced Pids Maximum Number Reached,ALARM_MAIN_ID_MAX_UNREFERENCED_PID,0x0021,X,,,,,Board,No detail,Input,Quality,Measure,MSG_SUB_CLASS_NR_MAX_UNREFERENCED_PIDS,Enabled,0,0,MAJOR,Cleared by system,Binary,Not,V02-05,V08-01,V02-05,V06-09,Not,Not,,,,ok_PS,,,,,,,,,
+PAT Error,ALARM_MAIN_ID_PAT,0x0022,X,X,X,,,"Board, Port, TS info","TS info, Source IP",Input,Quality,Measure,MSG_SUB_CLASS_NR_PAT_ERROR ,Disabled,0,0,MAJOR,Cleared by system,Binary,Not,V02-05,V08-01,V02-05,V06-09,Not,Not,,,,ok_rt_PS,,,,,,,,,
+PMT Error,ALARM_MAIN_ID_PMT,0x0023,X,X,X,SID,,"Board, Port, TS info, SID","TS info, Source IP",Input,Quality,Measure,MSG_SUB_CLASS_NR_PMT_ERROR ,Disabled,0,0,MAJOR,Cleared by system,Binary,Not,V02-05,V08-01,V02-05,V06-09,Not,Not,,,,ok_rt_PS,,,,,,,,,
+PMT section exceeds 1K,ALARM_MAIN_ID_PMT_SECTION_EXCEEDS_1K,0x0024,X,X,X,SID,,"Board, Port, TS info, SID (on TC, Port and TS info are replaced by service User Tag)",TS info,Output,Quality,Measure,MSG_SUB_CLASS_NR_PMT_SECTION_EXCEEDS_1K,Enabled,0,0,MAJOR,Cleared by system,Binary,Not,V02-05,V08-01,V02-05,V06-09,Not,V07-05,,x,,ok_PS (Capitals)
+Invalid Video Format,ALARM_MAIN_ID_INVALID_VIDEO_FORMAT,0x0025,X,X,X,,,"Board, Port, TS info","TS info, Source IP",Input,Quality,Measure,MSG_SUB_CLASS_NR_UDP_LOSS,Enabled,0,0,MAJOR,Cleared by system,Binary,Not,Not,Not,V01-05,Not,V07-01,Not,,,,ok
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Port Bandwidth Exceeded,ALARM_MAIN_ID_PORT_BW_EXCEEDED,0x0026,X,X,,,,"Board, Port",No detail,Output,Quality,Measure,MSG_SUB_CLASS_NR_GBE_BFR_OVERFLOW,Enabled,0,0,MAJOR,Cleared by system,Binary,Not,Not,Not,V03-00,Not,V07-01,Not,,,,ok_PS
+Card Not Operational,ALARM_SYSTEM_ID_CARD_NOT_OPERATIONAL,0x0027,X,,,,,Board,"Reason of Failure (""Not Connected"" or alarm text)",Other,Equipment,Software,MSG_SUB_CLASS_NR_SOFT_FATAL,Disabled,0,0,MAJOR,Cleared by system,Binary,V04-00,Not,V08-01,Not,Not,V07-01,Not,,x,,ok_PS
+Device Operational Failure,ALARM_SYSTEM_ID_DEVICE_OPERATIONAL_FAILURE,0x0028,0,,,,,Board 0,Reason of Failure (alarm text: subject),Other,Quality,DeviceStatus,MSG_SUB_CLASS_NR_DEVICE_OPERATIONAL_FAILURE,Disabled,0,0,MAJOR,Cleared by system,Binary,V04-00,Not,V08-01,Not,Not,Future (2),Not,,x,,ok_PS
+Missing FEC stream(s),ALARM_MAIN_ID_FEC_STREAM_MISSING,0x0029,X,X,X,,,"Board, Port, TS info","TS info, Source IP",Input,Quality,Measure,MSG_SUB_CLASS_NR_FEC_STREAM_MISSING,Enabled,0,0,MAJOR,Cleared by system,Binary,Not,Not,Not,V05-00,Not,Future(3),Not,,x,,ok_PS (Capitals)
+Payload Bitrate Too Low,ALARM_MAIN_ID_PAYLOAD_TOO_LOW,0x0030,X,X,X,,,"Board, Port, TS info",TS info,Output,Quality,Measure,MSG_SUB_CLASS_NR_PAYLOAD_LOW,Enabled,0,0,MAJOR,Cleared by system,Binary,Not,V06-00,V08-01,V06-00,V06-09,Not,Not,,,,ok_PS
+DTF Bandwidth Exceeded ,ALARM_MAIN_ID_DTF_BW_EXCEEDED,0x0031,X,X,,,,"Board, Port",No detail,Output,Quality,Measure,MSG_SUB_CLASS_NR_DTF_ASI_BFR_OVERFLOW,Enabled,0,0,MAJOR,Cleared by system,Binary,Not,V04-05,Not,Not,Not,Not,Not,,,,not_ok_PS (subclass nr)
+FEC Fan Failure,ALARM_MAIN_ID_FEC_FAN_FAILURE,0x0032,X,,,,,Board,No detail,Other,Equipment,Hardware,MSG_SUB_CLASS_NR_FAN_STATUS,Enabled,0,0,MAJOR,Cleared by system,Binary,Not,Not,Not,Not,Not,Not,Not,,,,
+FEC Temperature Alarm,ALARM_MAIN_ID_FEC_TEMP_ALARM,0x0033,X,,,,,Board,No detail,Other,Quality,Hardware,MSG_SUB_CLASS_NR_HARD_TEMP_FAIL,Enabled,5,0,CRITICAL,Cleared by system,Binary,Not,Not,Not,V05-00,Not,Not,Not,,x,,
+No DTF Concentrator License Available,ALARM_MAIN_ID_NO_DTF_CONCENTRATOR_LICENSE,0x0034,X,,,,,Board,No detail,Other,Processing,Software,MSG_SUB_CLASS_NR_MAX_LICENSES,Enabled,0,0,MAJOR,Cleared by user,Binary,Not,V04-05,Not,Not,Not,Not,Not,,,,ok_PS
+No FEC License Available (Decoding),ALARM_MAIN_ID_NO_FEC_DEC_LICENSE,0x0035,X,X,X,,,"Board, Port, TS info","TS info, Source IP",Input,Processing,Software,MSG_SUB_CLASS_NR_MAX_LICENSES,Enabled,0,0,MAJOR,Cleared by system,Binary,Not,Not,Not,V05-00,Not,Not,Not,,x,,ok_rt_PS
+No FEC License Available (Encoding),ALARM_MAIN_ID_NO_FEC_ENC_LICENSE,0x0036,X,X,X,,,"Board, Port, TS info",TS info,Output,Processing,Software,MSG_SUB_CLASS_NR_MAX_LICENSES,Enabled,0,0,MAJOR,Cleared by system,Binary,Not,Not,Not,V05-00,Not,Not,Not,,x,,ok_PS
+TS Loss,ALARM_MAIN_ID_TS_LOSS,0x0037,X,X,X,,,"Board, Port, TS info","TS info, Source IP, Cause",Input,Quality,Measure,MSG_SUB_CLASS_NO_VALID_INPUT_STREAM,Disabled,0,0,MAJOR,Cleared by system,Binary,Not,V04-05,V08-01,V04-05,V06-09,Not,Not,,,,ok_rt_PS
+No DTF Scrambling License Available,ALARM_MAIN_ID_NO_DTF_SCRAMBLING_LICENSE,0x0038,X,,,,,,No detail,Other,Processing,Software,MSG_SUB_CLASS_NR_MAX_LICENSES,Enabled,0,0,MAJOR,Cleared by user,Binary,Not,V04-05,Not,Not,Not,Not,Not,,,,
+Insertion Channel Active,ALARM_MAIN_ID_AD_INSERTED,0x0039,X,X,X,SID,,"Board, Port, TS info, SID",DPI Channel Name,Output,Quality,Measure,MSG_SUB_CLASS_NR_AD_INSERTED,Disabled,0,0,WARNING,Cleared by system,Binary,Not,V04-05,Not,V04-05,V06-09,Not,Not,,,,
+I/O Fan Failure,ALARM_MAIN_ID_IO_FAN_FAILURE,0x0040,X,,,,,No subject,No detail,Other,Equipment,Hardware,MSG_SUB_CLASS_NR_FAN_STATUS,Enabled,0,0,MAJOR,Cleared by system,Binary,Not,Not,Not,Not,Not,Not,Not,,,,
+Heartbeat Protocol Error,ALARM_SYSTEM_ID_DBU_HEARTBEAT_ERROR ,0x0041,0,X,,,,"Board 0, Port",No detail,Other,Communication,Communication,MSG_SUB_CLASS_NR_DBU_HEARTBEAT_ERROR,Disabled,0,0,MAJOR,Cleared by system,Binary,V04-05,Not,Not,Not,Not,Not,Not,,x,,
+Async sources,ALARM_MAIN_ID_STATMUX_ASYNC_SOURCES,0x0042,X,,,,,Board,No detail,Other,Quality,Measure,MSG_SUB_CLASS_NR_ASYNC_ENCODER,Enabled,0,0,MAJOR,Cleared by system,Binary,Not,V04-05,V08-01,V04-05,V06-09,Not,Not,,,,
+Too many encoders in pool,ALARM_MAIN_ID_STATMUX_TOO_MANY_ENCODERS_IN_POOL,0x0043,X,,IP,,,Board,"IP address of device which is not allowed in the statmux, pool",Other,Processing,Measure,MSG_SUB_CLASS_NR_TOO_MANY_ENCODERS,Enabled,0,0,MAJOR,Cleared by system,Binary,Not,V04-05,Not,V04-05,,Not,Not,,,,
+Too many encoders total,ALARM_MAIN_ID_STATMUX_TOO_MANY_ENCODERS_TOTAL,0x0044,X,,IP,,,Board,IP address of device which is not allowed in the statmux,Other,Processing,Measure,MSG_SUB_CLASS_NR_TOO_MANY_ENCODERS,Enabled,0,0,MAJOR,Cleared by system,Binary,Not,V04-05,Not,V04-05,,Not,Not,,,,
+Encoder dropout,ALARM_MAIN_ID_STATMUX_ENCODER_DROPOUT,0x0045,X,,IP,,,Board,IP address of device which has dropped out,Other,Processing,DeviceAction,MSG_SUB_CLASS_NR_ENCODER_REMOVED,Enabled,0,0,MAJOR,Cleared by system,Binary,Not,V04-05,Not,V04-05,,Not,Not,,,,
+Card in Backup,ALARM_MAIN_ID_STATMUX_TRIGGER_BACKUP,0x0046,X,,,,,Board,No detail,Other,Processing,Backup Management,MSG_SUB_CLASS_NR_CARD_IN_BACKUP,Enabled,0,0,WARNING,Cleared by system,Binary,Not,V04-05,V08-01,V04-05,,Not,Not,,,,Not implemented ?
+Co-processor Not Operational,ALARM_MAIN_ID_CO_PROCESSOR_NOT_OPERATIONAL,0X0047,X,,,,,Board,No detail,Other,Equipment,Software,MSG_SUB_CLASS_NR_SOFT_FATAL,Disabled,0,0,MAJOR,Cleared by system,Binary,Not,Not,Not,Not,Not,Not,Not,,,,Not implemented ?
+Transrating problem,ALARM_MAIN_ID_TRANSRATING_PROBLEM,0x0048,X,X,X,SID,,"Board, Port, TS info, SID","TS info, Cause",Output,Quality,Measure,MSG_SUB_CLASS_NR_TRANSRATING_ERROR ,Disabled,0,0,MAJOR,Cleared by system,Binary,Not,V04-05,Not,V04-05,,Not,Not,,,,ok_PS (Capitals)
+Service loss at output,ALARM_MAIN_ID_OUTPUT_SERVICE_LOSS,0x0049,X,X,X,SID,,"Board, Port, TS info, SID","Active source SID info, service loss reason and TS info of destination, e.g. ""Input Service=Board 3, Port 1, TS 225.0.0.1:49999, Service 100=;Reason=UDP Loss=;TS=229.0.0.1:49410=;""",Output,Quality,Measure,MSG_SUB_CLASS_NR_ NO_VALID_DATA_ON_OUTPUT,Enabled,0,0,MAJOR,Cleared by system,Binary,Not,V05-00,Not,V05-00,V06-09,V07-01,Not,,,,ok_rt
+Service in Backup (Service Loss),ALARM_MAIN_ID_OUTPUT_BACKUP_SERVICE_SERVICE_LOSS,0x004A,X,X,X,SID,,"Board, Port, TS info, SID (on TC, Port and TS info are replaced by service User Tag)",TS info,Output,Processing,Backup Management,MSG_SUB_CLASS_NR_BACKUP_ACTIVE,Disabled,0,0,WARNING,Cleared by system,Binary,Not,V05-00,Not,V05-00,V06-09,V07-05,V07-05,,,,ok_rt
+User Selected PCR PID Error,ALARM_MAIN_ID_USER_PCR_PID_ERROR,0x004B,X,X,X,,,"Board, Port, TS info","TS info, Source IP",Input,Quality,Measure,MSG_SUB_CLASS_NR_PID_ERROR,Enabled,0,0,MAJOR,Cleared by system,Binary,Not,Not,Not,V05-00,Not,Not,Not,,,,ok_rt_PS
+FEC L/D Error,ALARM_MAIN_ID_FEC_L_D_ERROR,0x004C,X,X,X,,,"Board, Port, TS info","TS info, Source IP, L, D",Input,Quality,Measure,MSG_SUB_CLASS_NR_FEC_L_D_ERROR,Enabled,0,0,MAJOR,Cleared by system,Binary,Not,Not,Not,V05-00,Not,Future(3),Not,,x,,ok_rt_PS
+Service in Backup (TS Loss),ALARM_MAIN_ID_OUTPUT_BACKUP_SERVICE_TS_LOSS,0x004D,X,X,X,SID,,"Board, Port, TS info, SID (on TC, Port and TS info are replaced by service User Tag)",TS info,Output,Processing,Backup Management,MSG_SUB_CLASS_NR_BACKUP_ACTIVE,Disabled,0,0,WARNING,Cleared by system,Binary,Not,V05-00,Not,V05-00,V06-09,Not,V07-05,,,,ok_PS (Capitals)
+Stuffing Rate Too Low,ALARM_MAIN_ID_STUFFING_TOO_LOW,0x004E,X,X,X,,,"Board, Port, TS info",TS info,Output,Quality,Measure,MSG_SUB_CLASS_NR_STUFFING_THRESHOLD_EXCEEDED,Enabled,0,0,MAJOR,Cleared by system,Binary,Not,V06-00,Not,V06-00,V06-00,Not,Not,,,,ok_PS
+Hardware Key Inserted,ALARM_MAIN_ID_HARDWARE_KEY_INSERTED,0x004F,0,,,,,Board 0,No detail,Other,Communication,Communication,MSG_SUB_CLASS_NR_HARDWARE_KEY_INSERTED,Enabed,0,0,MAJOR,Cleared by system,Binary,V05-01,Not,Not,Not,Not,Not,Not,,,,
+Destination IP Unresolved,ALARM_MAIN_ID_DESTINATION_IP_UNRESOLVED,0x0050,X,X,X,,,"Board, Port, TS info",TS info,Output,Processing,ExternalDevice,MSG_SUB_CLASS_NR_ DESTINATION_IP_UNRESOLVED,Enabled,5,0,MAJOR,Cleared by system,Binary,Not,Not,Not,V05-01,Not,Not,Not,,,,ok
+Illegal Encoder Version,ALARM_MAIN_ID_STATMUX_ILLEGAL_ENCODER_VERSION,0x0051,X,,IP,,,Board,IP address of encoder,Other,Communication,Communication,MSG_SUB_CLASS_NR_WRONG_VERSION,Enabled,0,0,MAJOR,Cleared by system,Binary,Not,V05-01,Not,V05-01,,Not,Not,Statmux,,,
+No AVC Encoder,ALARM_MAIN_ID_STATMUX_NO_AVC_ENCODER,0x0052,X,,IP,,,Board,Pool,Other,Processing,Measure,MSG_SUB_CLASS_NR_COMB_POOL_NOT_COMB,Enabled,0,0,WARNING,Cleared by system,Binary,Not,V05-01,Not,V05-01,,Not,Not,Statmux,,,
+No MPEG2 Encoder,ALARM_MAIN_ID_STATMUX_NO_MPEG2_ENCODER,0x0053,X,,IP,,,Board,Pool,Other,Processing,Measure,MSG_SUB_CLASS_NR_COMB_POOL_NOT_COMB,Enabled,0,0,WARNING,Cleared by system,Binary,Not,V05-01,Not,V05-01,,Not,Not,Statmux,,,
+Not Receiving Heartbeat Messages From Peer,ALARM_MAIN_ID_DBU_PEER_UNREACHABLE,0x0054,0,X,,,,"Board 0, Port",Peer IP,Other,Communication,Communication,MSG_SUB_CLASS_NR_DBU_PEER_UNREACHABLE,Disabled,0,0,MAJOR,Cleared by system,Binary,V06-00,Not,Not,Not,Not,Not,Not,Statmux,,,
+Unable To Scramble Input TS In DTF Combined Transport Stream,ALARM_MAIN_ID_DTF_NOT_SCRAMBLED,0x0055,X,X,X,PID,,"Board, Port, TS info, PID",no detail,Output,Processing,Software,MSG_SUB_CLASS_NR_DTF_NOT_SCRAMBLED,Enabled,0,0,MAJOR,Cleared by system,Binary,Not,V06-00,Not,Not,Not,Not,Not,DTF,,,ok (wrong screenshot)
+Service Name Truncated in VCT,ALARM_MAIN_ID_SVC_NAME_TRUNCATED,0x0056,X,X,X,,,"Board, Port, TS info","SID, Truncated name",Output,Processing,DeviceAction,MSG_SUB_CLASS_NR_NAME_TRUNCATED,Disabled,0,0,MINOR,Cleared by system,Binary,Not,V06-00,Not,V06-00,V06-09,Not,Not,,,,ok
+SFN No valid GPS clock reference present,ALARM_MAIN_ID_SFN_NO_CLOCK_REF,0x0057,X,,,,,Board,"""1 PPS clock reference not valid"" or ""10 MHz clock reference not valid"" or ""1PPS and 10 MHz clock reference not valid""",Output,Quality,Measure,MSG_SUB_CLASS_NR_CLOCK_REFERENCE_MISMATCH,Enabled,0,0,MAJOR,Cleared by system,Binary,Not,Not,Not,Not,V06-09,Not,Not,,No,,ok
+TS Output disabled,ALARM_MAIN_ID_TS_OUTPUT_DISABLED,0x0058,X,X,X,,,"Board, Port",Reasons why TS is not allowed to stream,Output,Processing,DeviceAction,MSG_SUB_CLASS_NR_TS_OUTPUT_DISABLED,Enabled,0,0,MAJOR,Cleared by system,Binary,Not,Not,Not,Not,V06-09,Not,Not,,No,,ok
+Bitrate Too Variable For CBR Dejittering,ALARM_MAIN_ID_RATE_TOO_VARIABLE_CBR_DEJITTER,0x0059,X,X,X,,,"Board, Port TS info","TS info, Source IP",Input,Processing,ExternalDevice,MSG_SUB_CLASS_RATE_TOO_VARIABLE_CBR_DEJITTER,Enabled,0,0,MAJOR,Cleared by system,Binary,Not,Not,Not,V06-05,Not,Not,Not,,No,,ok_rt
+ASI Input Bandwidth Exceeded,ALARM_MAIN_ID_ASI_INPUT_BW_EXCEEDED,0x0060,X,X,,,,"Board, Port",No detail,Input,Quality,Measure,MSG_SUB_CLASS_NR_ASI_BFR_OVERFLOW,Enabled,0,5,MAJOR,Cleared by system,Binary,Not,V06-09,Not,Not,V06-09,Not,Not,,No,,ok
+No PCR Present,ALARM_MAIN_ID_NO_PCR_PRESENT,0x005A,X,X,X,SID,,"Board, UserTag, SID",No detail,Output,Processing,Measure,MSG_SUB_CLASS_NR_NO_PCR_PRESENT,Enabled,0,0,MAJOR,Cleared by system,Binary,Not,Not,Not,Not,Not,Not,V07-05,,No,,ok
+Transcoding Problem,ALARM_MAIN_ID_TRANSCODING_PROBLEM,0x005B,X,X,X,SID,PID,"Board, UserTag, SID, PID","PID, Type of stream (audio/video)",Output,Quality,Measure,MSG_SUB_CLASS_NR_TRANSCODING_PROBLEM,Enabled,0,0,MAJOR,Cleared by system,Binary,Not,Not,Not,Not,Not,Not,V07-05,,No,,ok
+Audio Mismatch,ALARM_MAIN_ID_AUDIO_MISMATCH,0x005C,X,X,X,SID,PID,"Board, UserTag, SID, PID",PID,Output,Quality,Measure,MSG_SUB_CLASS_NR_AUDIO_MISMATCH,Enabled,0,0,MAJOR,Cleared by system,Binary,Not,Not,Not,Not,Not,Not,V07-05,,No,,
+Audio Bitrate Altered,ALARM_MAIN_ID_AUDIO_BITRATE_ALTERED,0x005D,X,X,X,SID,PID,"Board, UserTag, SID, PID","PID, Adjusted bitrate",Output,Processing,Measure,MSG_SUB_CLASS_NR_AUDIO_BITRATE_ALTERED,Enabled,0,0,INFORMATION,Cleared by system,Binary,Not,Not,Not,Not,Not,Not,V07-05,,No,,ok
+Audio Level Clipped,ALARM_MAIN_ID_AUDIO_LEVEL_CLIPPED,0x005E,X,X,X,SID,PID,"Board, UserTag, SID, PID",PID,Output,Quality,Measure,MSG_SUB_CLASS_NR_AUDIO_LEVEL_CLIPPED,Enabled,0,0,MAJOR,Cleared by system,Binary,Not,Not,Not,Not,Not,Not,V07-05,,No,,ok
+SD/HD Mismatch,ALARM_MAIN_ID_TC_SD_HD_CONFLICT,0x005F,X,X,X,SID,PID,"Board, UserTag, SID, PID",PID,Output,Quality,Measure,MSG_SUB_CLASS_NR_TC_SD_HD_CONFLICT,Enabled,0,0,MAJOR,Cleared by system,Binary,Not,Not,Not,Not,Not,Not,V07-05,,No,,ok
+IP Gateway License Error,ALARM_MAIN_ID_LICENSE_ERROR,0x0066,X,X,X,,,"Board, Port",License info,Other,Processing,Software,MSG_SUB_CLASS_NR_MAX_LICENSES,Enabled,0,0,MAJOR,Cleared by user,Binary,Not,Not,Not,Not,Not,V07-05,Not,,,,ok
+RTP Sequence Error,ALARM_MAIN_ID_RTP_SEQUENCE_ERROR,0x0067,X,X,X,,,"Board, Port, TS info",,Input,Processing,Measure,MSG_SUB_CLASS_NR_RTP_OUT_OF_ORDER,Enabled,0,0,MINOR,Cleared by system,Binary,Not,Not,Not,Not,Not,Future (3),Not,,,,
+SDI Input Loss,ALARM_MAIN_ID_SDI_INPUT_LOSS,0x0068,X,X,X,,,"Board, Port",,Input,Quality,Measure,MSG_SUB_CLASS_NR_SDI_INPUT_LOSS,Enabled,0,0,MAJOR,Cleared by system,Binary,Not,Not,Not,Not,Not,V07-01,Not,,,,ok
+IP Gateway Reference Clock Input Loss,ALARM_MAIN_ID_REF_INPUT_LOSS,0x0069,X,,,,,Board,,Input,Quality,Measure,MSG_SUB_CLASS_NR_CLOCK_REFERENCE_INPUT_LOSS,Enabled,0,0,MAJOR,Cleared by system,Binary,Not,Not,Not,Not,Not,Future (3),Not,,,,
+Video Input Bandwidth Exceeded,ALARM_MAIN_ID_VIDEO_INPUT_BANDWIDTH_EXCEEDED,0x006A,X,X,X,,,"Board, Port, TS info",,Input,Quality,Measure,MSG_SUB_CLASS_NR_VIDEO_INPUT_BANDWIDTH_EXCEEDED,Enabled,0,0,MAJOR,Cleared by system,Binary,Not,Not,Not,Not,Not,V07-01,Not,,,,ok
+SDI EDH Error,ALARM_MAIN_ID_SDI_EDH_ERROR,0x006B,X,X,X,,,"Board, Port, TS info",,Input,Quality,Measure,MSG_SUB_CLASS_NR_SDI_EDH_ERROR,Enabled,0,0,MINOR,Cleared by system,Binary,Not,Not,Not,Not,Not,Future (6),Not,,,,
+SDI CRC Error,ALARM_MAIN_ID_SDI_CRC_ERROR,0x006C,X,X,X,,,"Board, Port, TS info",,Input,Quality,Measure,MSG_SUB_CLASS_NR_SDI_CRC_ERROR,Enabled,0,0,MINOR,Cleared by system,Binary,Not,Not,Not,Not,Not,Future (6),Not,,,,
+Ethernet Port Loss,ALARM_MAIN_ID_ETHERNET_PORT_LOSS,0x006D,X,X,,,,"Board, Port",,Input,Quality,Measure,MSG_SUB_CLASS_NR_ETHERNET_INPUT_LOSS,Enabled,0,0,MAJOR,Cleared by system,Binary,Not,Not,Not,Not,Not,Future (2),Not,,,,
+Embedded Audio Input Loss,ALARM_MAIN_ID_EMBEDDED_AUDIO_LOSS,0x006E,X,X,X,,,"Board, Port, TS info",TS info,Input,Quality,Measure,MSG_SUB_CLASS_NR_AUDIO_INPUT_LOSS,Enabled,0,0,MAJOR,Cleared by system,Binary,Not,Not,Not,Not,Not,Future (3),Not,,,,
+Clock Reference Mismatch,ALARM_MAIN_ID_CLOCK_REF_MISMATCH,0x006F,X,X,X,,,"Board, Port, TS info",TS info,Input,Quality,Measure,MSG_SUB_CLASS_NR_CLOCK_REFERENCE_MISMATCH,Enabled,0,0,MAJOR,Cleared by system,Binary,Not,Not,Not,Not,Not,Future (3),Not,,,,
+Wrong SFP Fitted,ALARM_MAIN_ID_WRONG_SFP_FITTED,0x0070,X,X,,,,"Board, Port",,Other,Equipment,Hardware,MSG_SUB_CLASS_NR_WRONG_SFP_FITTED,Enabled,0,0,MAJOR,Cleared by system,Binary,Not,Not,Not,Not,Not,V07-05,Not,,,,ok
+Time Table Acquisition Timeout,ALARM_MAIN_ID_TIME_TABLE_ACQUISITION_TIMEOUT,0x0071,0,,,,,Board 0,"""(TableName)""",Other,Quality,Clock,MSG_SUB_CLASS_NR_TIME_TABLE_ACQUISITION_TIMEOUT,Enabled,0,0,MINOR,Cleared by system,Binary,V07-01,Not,Not,Not,Not,Not,Not,,,,ok
+Port Already In Use - Bind Failed,ALARM_MAIN_ID_BIND_FAILED,0x0072,X,,"EisId, EmmgId, PsigId","instance (0 for TCP, 1 for UDP), but only for EMMG",,Type : Name,port (for which bind failed),Other,Quality,Measure,MSG_SUB_CLASS_NR_BIND_FAILED,Enabled,0,0,MAJOR,Cleared by system,Binary,V07-01,Not,Not,Not,Not,Not,Not,,,,ok_PS
+Selected Alternate Service Not Present,ALARM_MAIN_ID_SELECTED_ALTERNATE_SERVICE_NOT_PRESENT,0x0073,X,X,X,SID,,"Board, Port, TS info, SID",SID (which cannot be selected),Output,Quality,User Action,MSG_SUB_CLASS_NR_ALTERNATE_SERVICE_NOT_PRESENT,Enabled,0,0,MAJOR,Cleared by user,Binary,Not,V07-01,Not,V07-01,V07-01,Not,Not,,,,ok
+Service Backup Switched,ALARM_MAIN_ID_SERVICE_BACKUP_SWITCHED,0x0074,X,X,X,SID,,"Board, Port, TS info, SID (on TC, Port and TS info are replaced by service User Tag)","New active source, Old active source, switch reason, e.g. ""To Input Service=Board 3, Port 1, TS 225.0.0.1:49999, Service 100=;From Input Service=Board 4, Port 1, Service 101=;Reason=service loss=;Reason=PID Error:65,68=;""",Output,Processing,Backup Management,MSG_SUB_CLASS_NR_SVC_BACKUP_SWITCHED,Disabled,0,0,INFORMATION,Not pending,Binary,Not,V08-00,Not,V08-00,V08-00,Not,V08-00,,,,ok
+Service Redundancy Loss,ALARM_MAIN_ID_SERVICE_REDUNDANCY_LOSS,0x0075,X,X,X,SID,,"Board, Port, TS info, SID (on TC, Port and TS info are replaced by service User Tag)","All related input services (merged + backup) that are in alarm, e.g. Multiple SVCin strings ""Input Service=Board 3, Port 1, TS 225.0.0.1:49999, Service 100=;Input Service=Board 3, Port 2, TS 226.0.0.1:50000, Service 200=;""
+Also TS info of destination ",Output,Processing,Backup Management,MSG_SUB_CLASS_NR_SVC_REDUNDANCY_LOSS,Disabled,0,0,MINOR,Cleared by system,Binary,Not,V08-00,Not,V08-00,V08-00,Not,V08-00,,,,ok
+No SFP Fitted,ALARM_MAIN_ID_NO_SFP_FITTED,0x0076,X,X,,,,"Board, Port",,Other,Equipment,Hardware,MSG_SUB_CLASS_NR_NO_SFP_FITTED,Enabled,0,0,MAJOR,Cleared by system,Binary,Not,Not,Not,Not,Not,V07-05,Not,,,,ok
+Slate Generation Problem,ALARM_MAIN_ID_SLATE_GENERATION,0x0077,X,X,X,SID,,"Board, Port, TS info, SID","Cause (""No valid video component found"" or ""More than one valid video component found"" or ""No PCR found"")",Output,Quality,Measure,MSG_SUB_CLASS_NR_SLATE_GENERATION_PROBLEM,Enabled,0,0,MAJOR,Cleared by system,Binary,Not,V07-05,Not,V07-05,V07-05,Not,Not,,,,ok_PS
+License Installation Failure,ALARM_MAIN_ID_LICENSE_INSTALL_FAILURE,0x0078,0,,,,,Board 0,"Cause ("" Device state installation failed"" or ""License file contains invalid license version"" or ""Invalid feature in licensefile"")",Other,Quality,User Action,MSG_SUB_CLASS_NR_LICENSE_INSTALLATION_FAILURE,Enabled,0,0,MINOR,Cleared by system,Binary,V08-00,Not,Not,Not,Not,Not,Not,,,,
+Main Backup Device Role Conflict,ALARM_MAIN_ID_MAIN_BACKUP_DEVICE_ROLE_CONFLICT,0x0079,0,,,, ,Board 0,,Other,Quality,User Action,MSG_SUB_CLASS_NR_MAIN_BACKUP_DEVICE_ROLE_CONFLICT,Enabled,0,0,MINOR,Cleared by system,Binary,V08-00,Not,Not,Not,Not,Not,Not,,,,
+No Ad Server Available,ALARM_MAIN_ID_NO_AD_SERVER_AVAIL,0x007A,X,X,X,SID,,"Board, Port, TS info, SID",DPI Channel Name,Output,Communication,Communication,MSG_SUB_CLASS_NR_NO_AD_SERVER,Disabled,0,0,WARNING,Cleared by system,Binary,Not,V08-01,V08-01,V08-01,V08-01,Not,Not,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+8VSB Port RF Input Lock Loss,ALARM_MAIN_ID_8VSB_RF_INPUT_LOCK_LOSS,0x007B,X,X,,,,"Board, Port","Channel, Frequency",Input,Quality,Measure,MSG_SUB_CLASS_NR_8VSB_RF_INPUT_LOCK_LOSS,Enabled,0,0,MAJOR,Cleared by system,Binary,Not,Not,V08-01,Not,Not,Not,Not,,,,
+8VSB Port RF Input Level Too Low,ALARM_MAIN_ID_8VSB_RF_INPUT_LEVEL_TOO_LOW,0x007C,X,X,,,,"Board, Port","RF low threshold, RF input level",Input,Quality,Measure,MSG_SUB_CLASS_NR_8VSB_RF_INPUT_LEVEL_TOO_LOW,Enabled,0,0,MINOR,Cleared by system,Binary,Not,Not,V08-01,Not,Not,Not,Not,,,,
+8VSB Port RF Input Level Too High,ALARM_MAIN_ID_8VSB_RF_INPUT_LEVEL_TOO_HIGH,0x007D,X,X,,,,"Board, Port","RF high threshold, RF input level",Input,Quality,Measure,MSG_SUB_CLASS_NR_8VSB_RF_INPUT_LEVEL_TOO_HIGH,Enabled,0,0,MINOR,Cleared by system,Binary,Not,Not,V08-01,Not,Not,Not,Not,,,,
+8VSB Port MER Level Too Low,ALARM_MAIN_ID_8VSB_MER_LEVEL_TOO_LOW,0x007E,X,X,,,,"Board, Port","MER level, MER low threshold",Input,Quality,Measure,MSG_SUB_CLASS_NR_8VSB_RF_MER_LEVEL_TOO_LOW,Enabled,0,0,MINOR,Cleared by system,Binary,Not,Not,V08-01,Not,Not,Not,Not,,,,ok_PS (closed only)
+8VSB Port No License,ALARM_MAIN_ID_8VSB_LICENSE,0x007F,X,X,,,,"Board, Port",,Input,Processing,Software,MSG_SUB_CLASS_NR_8VSB_LICENSE,Enabled,0,0,MAJOR,Cleared by system,Binary,Not,Not,V08-01,Not,Not,Not,Not,,,,
+Heartbeat Version Mismatch,ALARM_MAIN_ID_DBU_VERSION_MISMATCH,0x0080,0,,,,,Board 0,,Other,Communication,Communication,MSG_SUB_CLASS_NR_DBU_VERSION_MISMATCH,Disabled,1,1,MINOR,Cleared by system,Binary,V08-01,Not,Not,Not,Not,Not,Not,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,not_ok_PS
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,not_ok_PS
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,not_ok_PS
+System,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,ok_PS (closed only)
+Dummy,,0x8000,,,,,,Board 0,No Detail,Other,Indeterminate,Measure,MSG_SUB_CLASS_NR_MSG_DUMMY,,,,,,,Not,Not,Not,Not,Not,Not,Not,,,,ok_PS (Capitals)
+Test Message,,0x8001,,,,,,Board 0,No Detail,Other,Communication,Communication,MSG_SUB_CLASS_NR_TEST_MESSAGE,Enabled,0,0,INFORMATION,Not pending,Binary,V01-00,Not,Not,Not,Not,Not,Not,,,,not_ok_PS
+Malfunction,,0x8002,X,,,,,Board 0,No Detail,Other,Equipment,Hardware,MSG_SUB_CLASS_NR_MALFUNCTION,Enabled,0,0,MAJOR,Cleared by user,Binary,Not,Not,Not,Not,Not,Not,Not,,,,
+Operational Temperature,ALARM_SYSTEM_ID_TEMP,0x8003,,,,,,Board 0,No Detail,Other,Quality,Hardware,MSG_SUB_CLASS_NR_GLOBAL_TEMPERATURE,Enabled,5,5,MINOR,Cleared by system,Binary,V01-00,Not,Not,Not,Not,Not,Not,,,,
+Fan Failure,ALARM_SYSTEM_ID_FAN,0x8004,,,,,,Board 0,Fans in failure,Other,Equipment,Hardware,MSG_SUB_CLASS_NR_FAN_STATUS,Enabled,5,5,MINOR,Cleared by system,Binary,V01-00,Not,Not,Not,Not,Not,Not,,,,
+PS 1 Failure,ALARM_SYSTEM_ID_PSU1,0x8005,,,,,,Board 0,No Detail,Other,Equipment,Hardware,MSG_SUB_CLASS_PSU1_FAILURE,Enabled,5,5,MINOR,Cleared by system,Binary,V01-00,Not,Not,Not,Not,Not,Not,,,,
+PS 2 Failure,ALARM_SYSTEM_ID_PSU2,0x8006,,,,,,Board 0,No Detail,Other,Equipment,Hardware,MSG_SUB_CLASS_PSU2_FAILURE,Enabled,5,5,MINOR,Cleared by system,Binary,V01-00,Not,Not,Not,Not,Not,Not,,,,
+Power Up,,0x8007,,,,,,Board 0,No Detail,Other,Equipment,Hardware,MSG_SUB_CLASS_NR_POWER_UP_MESSAGE,Enabled,0,0,INFORMATION,Not pending,Binary,V01-00,Not,Not,Not,Not,Not,Not,,,,
+Device is in Service Mode,ALARM_MAIN_ID_LOG_LEVEL_RAISED,0x8008,X,,,,,Board,No detail,Other,Quality,User Action,MSG_SUB_CLASS_NR_USER_RAISED_LOG_LEVEL,Enabled,0,0,WARNING,Cleared by system,Binary,V05-00,V05-00,V08-01,V05-00,V06-09,,,,,,
+NTP Offset,ALARM_SYSTEM_ID_NTP_OFFSET,0x8009,,,,,,Board 0,No Detail,Other,Quality,Clock,MSG_SUB_CLASS_NR_NTP_OFFSET_ERROR,Enabled,0,0,MAJOR,Cleared by system,Binary,V05-00,Not,Not,Not,Not,Not,Not,,,,
+Low memory,ALARM_MAIN_ID_LOW_MEMORY,0x800A,X,,,,,Board,Free memory,Other,Processing,Software,MSG_SUB_CLASS_NR_LOW_MEMORY,Enabled,0,0,MAJOR,Cleared by system,Binary,Not,V05-00,V08-01,V05-00,V06-09,,,,,,
+Buffer Overflow,ALARM_MAIN_ID_BUFFER_OVERFLOW,0x800B,X,,,,,Board,Buffer name,Other,Processing,Software,MSG_SUB_CLASS_NR_BUFFER_OVERFLOW,Enabled,0,0,MAJOR,Cleared by system,Binary,Not,Not,Not,Not,Not,Not,V07-01,,No,,
+
+Defined classes,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+ALARM_CLASS_COMMUNICATION,0,Communication
+ALARM_CLASS_QUALITY,1,Quality
+ALARM_CLASS_PROCESSING,2,Processing
+ALARM_CLASS_EQUIPMENT,3,Equipment
+ALARM_CLASS_ENVIRONMENTAL,4,Environmental
+ALARM_CLASS_INDETERMINATE,,
+
+
+Defined subclasses,,
+ALARM_SUB_CLASS_COMMUNICATION,0,Communication
+ALARM_SUB_CLASS_CLOCK,1,Clock
+ALARM_SUB_CLASS_SCHEDULER,2,Scheduler
+ALARM_SUB_CLASS_EXTERNAL_DEVICE,3,External device
+ALARM_SUB_CLASS_MEASURE,8,Measure
+ALARM_SUB_CLASS_PERIODIC_REPORT,9,Periodic report
+ALARM_SUB_CLASS_DEVICE_ACTION,10,Device Action
+ALARM_SUB_CLASS_USER_ACTION,11,User Action
+ALARM_SUB_CLASS_SOFTWARE,24,Software
+ALARM_SUB_CLASS_HARDWARE,25,Hardware
+ALARM_SUB_CLASS_DEVICE_SPECIFIC_SOFTWARE,32,Device specific software
+ALARM_SUB_CLASS_DEVICE_SPECIFIC_HARDWARE,33,Device specific hardware
+ALARM_SUB_CLASS_DEVICE_IIC,34,Device IIC
+ALARM_SUB_CLASS_DEVICE_CONFIGURATION,35,Device Configuration
+ALARM_SUB_CLASS_DEVICE_STATUS,36,Device Status
+ALARM_SUB_CLASS_TASK,40,Task
+ALARM_SUB_CLASS_BACKUP_MANAGEMENT,80,Backup Management
+ALARM_SUB_CLASS_SERVER,100,Server
+
+Defined subclassnumbers,,
+MSG_SUB_CLASS_NR_MSG_DUMMY,0,
+MSG_SUB_CLASS_NR_MALFUNCTION,0,
+MSG_SUB_CLASS_NR_TEST_MESSAGE,0,
+MSG_SUB_CLASS_NR_PR_TOT_INVALID ,0
+MSG_SUB_CLASS_NR_SOFT_FATAL,0
+MSG_SUB_CLASS_NR_VCO_UNLOCK,1
+MSG_SUB_CLASS_NR_BACKUP_ACTIVE,1
+MSG_SUB_CLASS_NR_NTP_OFFSET_ERROR,2
+MSG_SUB_CLASS_NR_INP_LEVEL,4
+MSG_SUB_CLASS_NR_MAX_LICENSES,4
+MSG_SUB_CLASS_NR_CARD_IN_BACKUP,4
+MSG_SUB_CLASS_NR_RF_OFF,5
+MSG_SUB_CLASS_NR_LOW_MEMORY,5
+MSG_SUB_CLASS_NR_ DESTINATION_IP_UNRESOLVED,6
+MSG_SUB_CLASS_NR_MODULATION_OFF,7
+MSG_SUB_CLASS_NR_PAYLOAD_LOW,7
+MSG_SUB_CLASS_NR_DTF_NOT_SCRAMBLED,7
+MSG_SUB_CLASS_RATE_TOO_VARIABLE_CBR_DEJITTER,7
+MSG_SUB_CLASS_NO_VALID_INPUT_STREAM,9
+MSG_SUB_CLASS_PSU1_FAILURE,10
+MSG_SUB_CLASS_NR_BER_WARNING,10
+MSG_SUB_CLASS_NR_BER_ALARM,11
+MSG_SUB_CLASS_PSU2_FAILURE,11
+MSG_SUB_CLASS_NR_HARD_TEMP_FAIL,12
+MSG_SUB_CLASS_NR_GLOBAL_TEMPERATURE,15
+MSG_SUB_CLASS_NR_NO_INPUT_SIGNAL,15
+MSG_SUB_CLASS_NR_DEVICE_OPERATIONAL_FAILURE,16
+MSG_SUB_CLASS_NR_USER_RAISED_LOG_LEVEL,16
+MSG_SUB_CLASS_NR_USER_ACTIVATED_SCRAMBLING,17
+MSG_SUB_CLASS_NR_CHANNEL_ERROR,17
+MSG_SUB_CLASS_NR_POWER_UP_MESSAGE,18
+MSG_SUB_CLASS_NR_USER_ECMG_REMOVE,18
+MSG_SUB_CLASS_NR_CHANNEL_CLOSE_PEER,18
+MSG_SUB_CLASS_NR_USER_EMMG_REMOVE,19
+MSG_SUB_CLASS_NR_CONNECTION_LOST,19
+MSG_SUB_CLASS_NR_TS_OUTPUT_DISABLED,19
+MSG_SUB_CLASS_NR_USER_EIS_REMOVE,20
+MSG_SUB_CLASS_NR_DBU_HEARTBEAT_ERROR,20
+MSG_SUB_CLASS_NR_USER_PSIG_REMOVE,21
+MSG_SUB_CLASS_NR_HARDWARE_KEY_INSERTED,21
+MSG_SUB_CLASS_NR_WRONG_VERSION,21
+MSG_SUB_CLASS_NR_LINK_STATUS,22
+MSG_SUB_CLASS_NR_ENCODER_REMOVED,22
+MSG_SUB_CLASS_NR_DBU_PEER_UNREACHABLE,23
+MSG_SUB_CLASS_NR_NAME_TRUNCATED,23
+MSG_SUB_CLASS_NR_FAN_STATUS,25
+MSG_SUB_CLASS_NR_NO_AD_SERVER,26
+MSG_SUB_CLASS_NR_FEC_SYNC_LOSS,101
+MSG_SUB_CLASS_NR_UNORR_ERROR_OVF,102
+MSG_SUB_CLASS_NR_ NO_VALID_DATA_ON_OUTPUT,108
+MSG_SUB_CLASS_NR_DTF_ASI_BFR_OVERFLOW,113
+MSG_SUB_CLASS_NR_ASI_BFR_OVERFLOW,113
+MSG_SUB_CLASS_NR_MPEG_SYNC_LOSS_INPUT,114
+MSG_SUB_CLASS_NR_SYNC_BYTE,116
+MSG_SUB_CLASS_NR_CC_ERROR,117
+MSG_SUB_CLASS_NR_PID_ERROR,118
+MSG_SUB_CLASS_NR_TS_ERROR,119
+MSG_SUB_CLASS_NR_CRC_ERROR,120
+MSG_SUB_CLASS_NR_UNREFERENCED_PID_ERROR,121
+MSG_SUB_CLASS_NR_PAT_ERROR,122
+MSG_SUB_CLASS_NR_CAT_ERROR,123
+MSG_SUB_CLASS_NR_PMT_ERROR,124
+MSG_SUB_CLASS_NR_NIT_ERROR,125
+MSG_SUB_CLASS_NR_SDT_ERROR,126
+MSG_SUB_CLASS_NR_EIT_ERROR,127
+MSG_SUB_CLASS_NR_SERVICE_BITRATE,128
+MSG_SUB_CLASS_NR_INCOMING_PACKET_RATE_EXCEEDED,129
+MSG_SUB_CLASS_NR_INCOMING_STUFFING_RATE_EXCEEDED,130
+MSG_SUB_CLASS_NR_PAT_RATE,131
+MSG_SUB_CLASS_NR_PMT_RATE,132
+MSG_SUB_CLASS_NR_CAT_RATE,133
+MSG_SUB_CLASS_NR_NIT_RATE,134
+MSG_SUB_CLASS_NR_SDT_BAT_RATE,135
+MSG_SUB_CLASS_NR_EIT_RATE,136
+MSG_SUB_CLASS_NR_RST_RATE,137
+MSG_SUB_CLASS_NR_TDT_TOT_RATE,138
+MSG_SUB_CLASS_NR_EMM_RATE,139
+MSG_SUB_CLASS_NR_INCOMING_PACKET_FORMAT,140
+MSG_SUB_CLASS_NR_INTERVAL ,141
+MSG_SUB_CLASS_NR_STUFFING_THRESHOLD_EXCEEDED,142
+MSG_SUB_CLASS_NR_DEV_SPEC_SOFTW_NEW_INCOMING_TABLE,143
+MSG_SUB_CLASS_NR_PR_OVERFLOW,146
+MSG_SUB_CLASS_NR_BACKUP_SWITCHED,144
+MSG_SUB_CLASS_NR_FIFOERROR,147
+MSG_SUB_CLASS_NR_CLOCK_REFERENCE_MISMATCH,159
+MSG_SUB_CLASS_NR_LINK_SWITCHED,202
+MSG_SUB_CLASS_NR_GBE_BFR_OVERFLOW,203
+MSG_SUB_CLASS_NR_SPTS_BFR_OVERFLOW,204
+MSG_SUB_CLASS_NR_STREAMING_ERROR,205
+MSG_SUB_CLASS_NR_ECMG_NO_CHANNEL_AVAILABLE,209
+MSG_SUB_CLASS_NR_SCS_CLEAR_EXTENSION,210
+MSG_SUB_CLASS_NR_SCS_CP_EXTENTION_NO_COMP,211
+MSG_SUB_CLASS_NR_PID_COULD_NOT_BE_ALLOCATED,212
+MSG_SUB_CLASS_NR_UDP_LOSS,226
+MSG_SUB_CLASS_NR_SD_HD_CONFLICT,227
+MSG_SUB_CLASS_NR_RTP_OUT_OF_ORDER,228
+MSG_SUB_CLASS_NR_PORT_UDP_LOSS,229
+MSG_SUB_CLASS_NR_MAX_UNREFERENCED_PIDS,230
+MSG_SUB_CLASS_NR_PMT_SECTION_EXCEEDS_1K,231
+MSG_SUB_CLASS_NR_FEC_STREAM_MISSING,233
+MSG_SUB_CLASS_NR_AD_INSERTED,234
+MSG_SUB_CLASS_NR_TRANSRATING_ERROR ,235
+MSG_SUB_CLASS_NR_FEC_L_D_ERROR,236
+MSG_SUB_CLASS_NR_ASYNC_ENCODER,237
+MSG_SUB_CLASS_NR_TOO_MANY_ENCODERS,238
+MSG_SUB_CLASS_NR_COMB_POOL_NOT_COMB,239
+,
+MSG_SUB_CLASS_NR_SDI_INPUT_LOSS,240
+MSG_SUB_CLASS_NR_CLOCK_REFERENCE_INPUT_LOSS,241
+MSG_SUB_CLASS_NR_INPUT_VIDEO_BANDWIDTH_EXCEEDED,242
+MSG_SUB_CLASS_NR_SDI_EDH_ERROR,243
+MSG_SUB_CLASS_NR_SDI_CRC_ERROR,244
+MSG_SUB_CLASS_NR_ETHERNET_INPUT_LOSS,245
+MSG_SUB_CLASS_NR_AUDIO_INPUT_LOSS,192
+MSG_SUB_CLASS_NR_WRONG_SFP_FITTED,31
+MSG_SUB_CLASS_NR_NO_PCR_PRESENT,248
+MSG_SUB_CLASS_NR_TRANSCODING_PROBLEM,249
+MSG_SUB_CLASS_NR_AUDIO_MISMATCH,250
+MSG_SUB_CLASS_NR_AUDIO_BITRATE_ALTERED,251
+MSG_SUB_CLASS_NR_AUDIO_LEVEL_CLIPPED,252
+MSG_SUB_CLASS_NR_BUFFER_OVERFLOW,253
+MSG_SUB_CLASS_NR_TC_SD_HD_CONFLICT,254
+MSG_SUB_CLASS_NR_TIME_TABLE_ACQUISITION_TIMEOUT,3
+MSG_SUB_CLASS_NR_BIND_FAILED,215
+MSG_SUB_CLASS_NR_ALTERNATE_SERVICE_NOT_PRESENT,22
+MSG_SUB_CLASS_NR_SVC_BACKUP_SWITCHED,5
+MSG_SUB_CLASS_NR_SVC_REDUNDANCY_LOSS,6
+MSG_SUB_CLASS_NR_NO_SFP_FITTED,255
+MSG_SUB_CLASS_NR_SLATE_GENERATION_PROBLEM,259
+MSG_SUB_CLASS_NR_LICENSE_INSTALLATION_FAILURE,23
+MSG_SUB_CLASS_NR_MAIN_BACKUP_DEVICE_ROLE_CONFLICT,24
+MSG_SUB_CLASS_NR_8VSB_RF_INPUT_LOCK_LOSS,263
+MSG_SUB_CLASS_NR_8VSB_RF_INPUT_LEVEL_TOO_LOW,264
+MSG_SUB_CLASS_NR_8VSB_RF_INPUT_LEVEL_TOO_HIGH,265
+MSG_SUB_CLASS_NR_8VSB_RF_MER_LEVEL_TOO_LOW,266
+MSG_SUB_CLASS_NR_8VSB_LICENSE,6
+MSG_SUB_CLASS_NR_DBU_VERSION_MISMATCH,267
